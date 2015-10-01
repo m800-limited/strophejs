@@ -28,7 +28,7 @@
 
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
-        define('strophe-base64', function () {
+        define(function () {
             return factory();
         });
     } else {
@@ -128,7 +128,7 @@
 
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
-        define('strophe-sha1', function () {
+        define(function () {
             return factory();
         });
     } else {
@@ -323,7 +323,7 @@ return {
 
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
-        define('strophe-md5', function () {
+        define('./md5', function () {
             return factory();
         });
     } else {
@@ -626,11 +626,11 @@ if (!Array.prototype.indexOf)
 
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
-        define('strophe-core', [
-            'strophe-sha1',
-            'strophe-base64',
-            'strophe-md5',
-            "strophe-polyfill"
+        define([
+            './sha1',
+            './base64',
+            './md5',
+            "./polyfill"
         ], function () {
             return factory.apply(this, arguments);
         });
@@ -4052,7 +4052,7 @@ return {
 
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
-        define('strophe-bosh', ['strophe-core'], function (core) {
+        define(['./core'], function (core) {
             return factory(
                 core.Strophe,
                 core.$build
@@ -4988,7 +4988,7 @@ return Strophe;
 
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
-        define('strophe-websocket', ['strophe-core'], function (core) {
+        define(['./core'], function (core) {
             return factory(
                 core.Strophe,
                 core.$build

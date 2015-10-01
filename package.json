@@ -40,7 +40,7 @@
     "phantomjs": "^1.9.13",
     "qunit-phantomjs-runner": "^2.1.0"
   },
-  "main": "strophe.js",
+  "main": "src/wrapper",
   "browser": "strophe.js",
   "scripts": {
     "lint": "grunt",

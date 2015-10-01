@@ -14,7 +14,7 @@
 
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
-        define('strophe-sha1', function () {
+        define(function () {
             return factory();
         });
     } else {

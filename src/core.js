@@ -10,11 +10,11 @@
 
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
-        define('strophe-core', [
-            'strophe-sha1',
-            'strophe-base64',
-            'strophe-md5',
-            "strophe-polyfill"
+        define([
+            './sha1',
+            './base64',
+            './md5',
+            "./polyfill"
         ], function () {
             return factory.apply(this, arguments);
         });

@@ -1,7 +1,7 @@
-define("strophe", [
-    "strophe-core",
-    "strophe-bosh",
-    "strophe-websocket"
+define([
+    "./core",
+    "./bosh",
+    "./websocket"
 ], function (wrapper) {
     return wrapper;
 });
